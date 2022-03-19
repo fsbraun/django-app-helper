@@ -19,6 +19,8 @@ try:
 
     CMS = True
     CMS_40 = LooseVersion("4.0") <= LooseVersion(cms.__version__) < LooseVersion("4.1")
+    CMS_310 = LooseVersion("3.10") <= LooseVersion(cms.__version__) < LooseVersion("3.11")
+    CMS_39 = LooseVersion("3.9") <= LooseVersion(cms.__version__) < LooseVersion("3.10")
     CMS_38 = LooseVersion("3.8") <= LooseVersion(cms.__version__) < LooseVersion("3.9")
     CMS_37 = LooseVersion("3.7") <= LooseVersion(cms.__version__) < LooseVersion("3.8")
     CMS_36 = LooseVersion("3.6") <= LooseVersion(cms.__version__) < LooseVersion("3.7")
@@ -45,7 +47,7 @@ DJANGO_2_2 = LooseVersion(django.get_version()) < LooseVersion("3.0")
 DJANGO_3_0 = LooseVersion(django.get_version()) < LooseVersion("3.1")
 DJANGO_3_1 = LooseVersion(django.get_version()) < LooseVersion("3.2")
 DJANGO_3_2 = LooseVersion(django.get_version()) < LooseVersion("4.0")
-
+DJANGO_4_0 = LooseVersion(django.get_version()) < LooseVersion("4.1")
 
 def load_from_file(module_path):
     """

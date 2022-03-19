@@ -9,15 +9,11 @@ jobs:
     continue-on-error: ${{ matrix.continue-on-error }}
     strategy:
       matrix:
-        python-version: [3.8, 3.7, 3.6, 3.5]
-        django: [31, 30, 22]
-        cms: [nocms, cms37, cms38, async]
+        python-version: [3.8, 3.7, 3.6]
+        django: [40, 32, 31, 30, 22]
+        cms: [nocms, cms37, cms38, cms39, async]
         continue-on-error: [false]
         exclude:
-          - python-version: 3.5
-            django: 30
-          - python-version: 3.5
-            django: 31
           - django: 31
             cms: cms37
     steps:

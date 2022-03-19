@@ -53,4 +53,5 @@ def get_default_settings(CMS_APP, CMS_PROCESSORS, CMS_MIDDLEWARE, CMS_APP_STYLE,
         MIGRATION_MODULES={},
         EMAIL_BACKEND="django.core.mail.backends.locmem.EmailBackend",
         ASGI_APPLICATION="app_helper.asgi:application",
+        SECRET_KEY="django CMS rocks",
     )
